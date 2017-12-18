@@ -1,8 +1,7 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<html manifest="scoring2014.manifest">
 <head>
-    <title>FRC 2018 - POWERUP</title>
+    <title>FLL 2014 - World Class</title>
     <!-- meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" / -->
     <!-- meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.1" / -->
     <meta name="viewport" content="user-scalable=no, width=850" />
@@ -11,26 +10,45 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="reset.css" type="text/css" media="screen, projection" />
 
-    <link rel="stylesheet" media="all" href="main.css">  
+    <link rel="stylesheet" media="all" href="main.css">
+
+    <!-- If you're here and have IE9, remove the exceptions let me know if the HTML5/CSS3 goodies work -->
+    <!-- Thanks... jay@reactivetechnologies.com -->
+
+    <!--[if !IE]><!-->
+    <!-- link rel="stylesheet" media="all and (orientation:portrait)" href="scoring2014_port.css" -->
+    <!-- link rel="stylesheet" media="all and (orientation:landscape)" href="scoring2014_land.css" -->
+    <!-- link rel="stylesheet" media="all and (max-device-width: 480px)" href="scoring2014_narrow.css" -->
+    <!--<![endif]-->    
     
     <script language="javascript" type="text/javascript" src="main.js"></script>
 </head>
 <body onload="reset();">
     <div id="main">
-        <button id="resetButton" type="reset" value="reset" onclick="reset();">Reset Score (this can't be undone!)</button>
+        <div id="timerText">2:30</div>
+        <button id="startStopButton" type="button" value="start" onclick="timerToggle();">Start</button>
+        <button id="resetButton" type="reset" value="reset" onclick="reset();">Reset</button>
+        <div id="counterBlock">
+            <div id="countUp"><input id="countUpButton" type="radio" value="up" onchange="countDirectionChange('up');"/>Count Up</div>
+            <div id="countDown"><input id="countDownButton" type="radio" value="down" onclick="countDirectionChange('down');"/>Count Down</div>
+        </div>
         <div id="scoreBlock">
             Score: <div id="scoreText">0</div>
         </div>
         <div id="box1">
-            <div id="box1Label" class="BoxLabel">Baseline</div>
-            <div id="box1Title" class="BoxTitle">Cross the baseline</div>
-            <div id="box1Item1" class="BoxItem1">How many robots crossed the baseline?</div>
-            <select id="robotsBaseline" class="ScoreBox" onchange="update();">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>            
+            <div id="box1Label" class="BoxLabel">1</div>
+            <div id="box1Title" class="BoxTitle">Reverse Engineering</div>
+            <div id="box1Item1" class="BoxItem1">Basket in Base</div>
+            <select id="basketInBase" class="YesNoBox" onchange="update();">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+            <div id="box1Item2" class="BoxItem2">Your model is in Base, and is "identical"</div>
+            <select id="modelIdentical" class="YesNoBox" onchange="update();">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
         <div id="box2">
             <div id="box2Label" class="BoxLabel">2</div>
             <div id="box2Title" class="BoxTitle">Opening Doors</div>
