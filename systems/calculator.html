@@ -120,11 +120,6 @@ filter: alpha(opacity=60); /* For IE8 and earlier */
   var browser = navigator.appName;
   var version = get_browser_version();
 
-  if (browser=="Microsoft Internet Explorer") {
-    if (version<="9.0")
-    document.location.href="http://classic.ev3lessons.com/"
-  }
-
   if (getParameterByName('lang') != null) {
     var language = getParameterByName('lang');
     //if (getParameterByName('langsave') != 'no') {
@@ -196,10 +191,10 @@ filter: alpha(opacity=60); /* For IE8 and earlier */
 
       </td>
       <td style="width:50%; font-size:24px; text-align:center">
-        <b id='title'>Hydro Dynamics Scorer</b>
+        <b id='title'>FRC Score</b>
       </td>
       <td style="width:25%; font-size:12px; text-align:right">
-        by <a href="http://ev3lessons.com" data-ajax="false"><img src="images/ev3lessons.jpg" width="139"></a>
+        <a href="http://milkenknights.com" data-ajax="false">Team 1836: The MilkenKnights</a>
       </td>
     </tr>
   </table>
@@ -217,15 +212,15 @@ filter: alpha(opacity=60); /* For IE8 and earlier */
           <div id="missionlist">
             <script>
 
-            starttable('M01', M01title, 'M01.png' , ['piperemoval'], 0)
-            createbutton("piperemoval", 20, M01a)
+            starttable('M01', M01title, '' , ['piperemoval'], 0)
+            createrange("piperemoval", 5 , 0, 3, 0, M01a,'')
             endtable()
 
-            starttable('M02', M02title,'M02.png', ['flow'], 0)
+            starttable('M02', M02title,'', ['flow'], 0)
             createbutton("flow", 25 , M02a)
             endtable()
 
-            starttable('M03', M03title,'M03.png', ['pumpaddition'], 0)
+            starttable('M03', M03title,'', ['pumpaddition'], 0)
             createbutton("pumpaddition", 20 , M03a)
             endtable()
 
