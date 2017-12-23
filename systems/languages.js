@@ -552,8 +552,8 @@ PenaltyText = " Combien de pénalités sont-elles dans le triangle blanc au Su
   pointsText = "Points"
   resetText = "Reset"
 
-  M01title = "Pipe Removal"
-  M01a = "Is the broken pipe completely in base?"
+  M01title = "Baseline"
+  M01a = "How many robots crossed the baseline?"
   M02title = "Flow"
   M02a = "Was one Big Water in the other team’s field as a result of turning the Pump System’s valve(s)?"
   M03title = "Pump Addition"
