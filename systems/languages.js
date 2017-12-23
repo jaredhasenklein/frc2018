@@ -554,8 +554,9 @@ PenaltyText = " Combien de pénalités sont-elles dans le triangle blanc au Su
 
   M01title = "Baseline"
   M01a = "How many robots crossed the baseline?"
-  M02title = "Flow"
-  M02a = "Was one Big Water in the other team’s field as a result of turning the Pump System’s valve(s)?"
+  M02title = "Fuel"
+  M02a = "How many fuels in the high goal?"
+  M02b = "How many fuels in the low goal?"
   M03title = "Pump Addition"
   M03a = "Is the Pump Addition in contact with the mat and completely inside the Pump Addition target?"
   M04title = "Rain"
