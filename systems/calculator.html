@@ -200,7 +200,7 @@ filter: alpha(opacity=60); /* For IE8 and earlier */
   </table>
 
   <div data-tap-toggle="false" data-role="footer" style="background-color: blue; font-size: 120%; color: white;" data-theme="a" data-position="fixed">
-    <h1 style="padding-top:0; padding-bottom:0" ><i id="pointsTxt">Points</i><i>: </i><i id="allpoints"> 0</i> &emsp; &emsp; &emsp; <input id="resetTxt" type="button" value="Reset" class="ui-mini" onclick='document.getElementById("missions").reset();loadsave("piperemoval|0,flow|0,pumpaddition|0,rain|0,filter|0,watertreatment|0,fountain|0,manholecovers|0,manholecovers2|0,tripod3|0,pipereplacement|0,pipeconstruction3|0,sludge|0,flower1|0,flower2|0,well3|0,fire|0,collection1|0,collection2|0,collection3|0,slingshot1|0,slingshot2|0,faucet|0,penalty|0");'></h1>
+    <h1 style="padding-top:0; padding-bottom:0" ><i id="pointsTxt">Points</i><i>: </i><i id="allpoints"> 0</i> &emsp; &emsp; &emsp; <input id="resetTxt" type="button" value="Reset" class="ui-mini" onclick='document.getElementById("missions").reset();loadsave("piperemoval|0,flow|0,flow2|0,pumpaddition|0,rain|0,filter|0,watertreatment|0,fountain|0,manholecovers|0,manholecovers2|0,tripod3|0,pipereplacement|0,pipeconstruction3|0,sludge|0,flower1|0,flower2|0,well3|0,fire|0,collection1|0,collection2|0,collection3|0,slingshot1|0,slingshot2|0,faucet|0,penalty|0");'></h1>
   </div>
 
   <div role="main" class="ui-content" style="padding-right:0; padding-left:0">
@@ -216,8 +216,9 @@ filter: alpha(opacity=60); /* For IE8 and earlier */
             createrange("piperemoval", 5 , 0, 3, 0, M01a,'')
             endtable()
 
-            starttable('M02', M02title,'', ['flow'], 0)
-            createbutton("flow", 25 , M02a)
+            starttable('', M02title,'', ['flow'], 0)
+            createrange("flow", 1 , 0, 9999999, 0, M02a,'')
+            createrange("flow2", 0.33 , 0, 9999999, 0, M02b,'')
             endtable()
 
             starttable('M03', M03title,'', ['pumpaddition'], 0)
