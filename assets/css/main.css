@@ -4210,6 +4210,11 @@
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
+
+		#copyright p {
+			color: #cc66ff;
+		}
+
 			#copyright a:hover {
 				border-bottom-color: transparent;
 				color: #18bfef !important;
