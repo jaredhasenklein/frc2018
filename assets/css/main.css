@@ -4212,7 +4212,7 @@
 
 
 		#copyright p {
-			color: #cc66ff;
+			color: #ffffff;
 		}
 
 			#copyright a:hover {
@@ -4250,6 +4250,7 @@
 			list-style: none;
 			margin: 0;
 			padding-left: 0;
+			color: #ffffff;
 		}
 
 			#copyright ul li {
@@ -4258,12 +4259,14 @@
 				line-height: 1;
 				margin-left: 1rem;
 				padding-left: 1rem;
+				color: #ffffff;
 			}
 
 				#copyright ul li:first-child {
 					border-left: 0;
 					margin-left: 0;
 					padding-left: 0;
+					color: #ffffff;
 				}
 
 		@media screen and (max-width: 1280px) {
